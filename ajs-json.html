@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/ionic.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="courseCtrl"> 
+
+<ul class="list">
+  <li ng-repeat="x in myCourse" class="item">
+    {{ x.title + ', ' + x.duration }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('courseCtrl', function($scope, $http) {
+  $http.get("http://localhost/phonegap/database/json.php").then(function (response) {
+      $scope.myCourse = response.data;
+  });
+});
+</script>
+
+</body>
+</html>

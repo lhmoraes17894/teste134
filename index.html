@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+   <html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="whidth=device-whidth,height=device-height,user-scalable=no,initial-scale=1">
+      <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+      <script src="js/jquery-1.12.1.min.js"></script>
+      <script src="js/jquery.mobile-1.4.5.min.js"></script>
+      <script src="js/func.js"></script>
+      <title>IMEI Loker</title>
+       
+  </head>
+
+   <body>
+           <div data-role="page" data-theme ="b">
+               <br>
+               <br>
+               <br>
+               <center>
+               <center><img src='locker.png'class='bg'whidth=device-whidth,height=device-height /></center>
+               <br>
+               <center><a href="#bara" ><img src='start.png'class='bg'whidth=device-whidth,height=device-height /></a></center>
+               </center>
+
+
+                    <div data-role="header" data-theme="b" data-position="fixed">
+                         
+                          <left> <img src='start1.png'class='bg'whidth="50px",height="50px" /></left>
+                          <a href="#outside" onclick="visivel()" value="Visibility" data-icon="bars" class="ui-btn-right" data-iconpos="notext">Menu</a>
+                             
+                   </div>
+                   </div><!-- /header -->
+
+
+            
+               
+             </div> <!-- /page1 -->
+
+          
+
+        <!-- Start of second page -->
+        <div data-role="page" id="bara" data-theme ="b">
+
+                 <div data-role="header" data-theme="b" data-position="fixed">
+                         
+                       <left> <img src='start1.png'class='bg'whidth="50px",height="50px" /></left>
+                       <a href="#outside" onclick="visivel()" value="Visibility" data-icon="bars" class="ui-btn-right" data-iconpos="notext">Menu</a>
+                 </div><!-- /header -->
+
+
+
+
+               <div role="main" class="ui-content">
+
+
+                 <div class ="ui-field-conter">
+
+                    <form action="insert.php" method="post">
+
+                       <label for="textinput-1">Nome Comleto:</label>
+                       <input type="text" name="nome" placeholder="Nome" />
+                       <label for="textinput-1">CPF:</label>
+                       <input type="text" name="cpf" placeholder="CPF sem pontos e traços" />
+                       <label for="select-native-1">Marca do aparelho:</label>
+                       <select name="marca" >
+                       <option value="Samsung">Samsung</option>
+                       <option value="Motorola">Motorola</option>
+                       <option value="Aplle">Aplle</option>
+                       <option value="Sony">Sony</option>
+                       <option value="LG">LG</option>
+                       <option value="Outros">Outros</option>
+
+
+                       </select>
+
+                       <label for="textinput-1">Modelo:</label>
+                       <input type="text" name="modelo" placeholder="Modelo do Dispositivo"/>
+
+                       <label for="textinput-1">Numero Do IMEI:</label>
+                       <input type="text" name="imei" placeholder="*#06# na tela de discagem" />
+       
+          
+                       <input type="submit" value="Cadastrar" >
+
+
+
+                 </form>
+
+                 </div>
+                 </div><!-- /main -->
+
+                 </div><!-- /page -->
+
+ <div data-role="panel" id="outside" data-theme="b">
+
+  
+                 <ul data-role="listview">
+               <li data-icon="back"><a href="index.html" data-rel="close">Voltar</a></li>
+                <li data-icon="gear"><a href="index.html" data-rel="close">Configurações</a></li>
+                     <li data-icon="user"><a href="#" data-rel="close">Meus Dados</a></li>
+                   <li data-icon="location"><a href="#" data-rel="close">Ultima localização</a></li>
+                   <li data-icon="check"><a href="https://www.google.com/settings/dashboard" data-rel="close">Meus Dispositivos</a></li>
+                  <li data-icon="recycle"><a href="#" data-rel="close">Atualizar</a></li>
+                   <li data-icon="info"><a href="#" data-rel="close">Sobre</a></li>
+             
+            </ul>
+     
+              </div> 
+
+    </body>
+
+
+   
+   </html>

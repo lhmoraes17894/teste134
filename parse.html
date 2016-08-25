@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-eval'; style-src * 'self' 'unsafe-inline';script-src * 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>Login</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="http://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            Parse.initialize("m5VotygUMHQT08AztIYe9ND8AZADyQXKyjNscsAc","l8AOISbGPMUzgn0lPUJ2kMBbpLpkOFxgdXsEzdh");
+            $("#login").click(function(){
+                var username=$("#username").val();
+                var password=$("#password").val();
+                Parse.User.logIn(username, password, {
+                  success: function(user) {
+                    console.log("logged in");
+                    console.log(user);
+                  },
+                  error: function(user, error) {
+                    alert("Error: " + error.code + " " + error.message);
+                  }
+                });
+            });
+            $("#signup").click(function(){
+                var username=$("#username").val();
+                var password=$("#password").val();
+
+                var user=new Parse.User();
+                user.set("username",username);
+                user.set("password",password);
+                user.signUp(null, {
+                success: function(user) {
+                    console.log(user);
+                  },
+                  error: function(user, error) {
+                    alert("Error: " + error.code + " " + error.message);
+                  }
+                });
+
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <input type="text" id="username">
+        <input type="password" id="password">
+        <button id="login">Login</button>
+        <button id="signup">Signup</button>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

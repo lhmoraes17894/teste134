@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+   <html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="whidth=device-whidth,height=device-height,user-scalable=no,initial-scale=1">
+      <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+      <script src="js/jquery-1.12.1.min.js"></script>
+      <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/func.js"></script>
+
+      <title>IMEI Loker</title>
+       
+  </head>
+
+   <body>
+
+
+
+        <div data-role="page" data-theme ="b">
+               
+
+                   <br>
+               <br>
+                <br>
+                
+               <center>
+               <center><img src='locker.png'class='bg'whidth=device-whidth,height=device-height /></center>
+               <br>
+                <br>
+
+     
+               <center><a href="#bara"><img src='start.png'class='bg'whidth=device-whidth,height=device-height /></a></center>
+                    </center>
+            <div data-role="header" data-theme="b" data-position="fixed">
+                         
+                     <left> <img src='start1.png'class='bg'whidth="50px",height="50px" /></left>
+                           
+                             <a href="#outside" onclick="visivel()" value="Visibility" data-icon="bars" class="ui-btn-right" data-iconpos="notext">Menu</a>
+                             
+     
+
+        </div>
+            </div><!-- /header -->
+
+
+            
+               
+             </div>
+
+ <div data-role="panel" id="outside" data-theme="b">
+
+  
+                  <ul data-role="listview">
+                <li data-icon="back"><a href="index.html" data-rel="close">Voltar</a></li>
+                <li data-icon="gear"><a href="index.html" data-rel="close">Configurações</a></li>
+                     <li data-icon="user"><a href="#" data-rel="close">Meus Dados</a></li>
+                   <li data-icon="location"><a href="#" data-rel="close">Ultima localização</a></li>
+                   <li data-icon="check"><a href="#" data-rel="close">Meus Dispositivos</a></li>
+                  <li data-icon="recycle"><a href="#" data-rel="close">Atualizar</a></li>
+                   <li data-icon="info"><a href="#" data-rel="close">Sobre</a></li>
+             
+            </ul>
+     
+              </div> 
+
+
+
+
+        <!-- Start of second page -->
+<div data-role="page" id="bara" data-theme ="b">
+
+         <div data-role="header" data-theme="b" data-position="fixed">
+                         
+                     <left> <img src='start1.png'class='bg'whidth="50px",height="50px" /></left>
+                           
+                             <a href="#outside" onclick="visivel()" value="Visibility" data-icon="bars" class="ui-btn-right" data-iconpos="notext">Menu</a>
+                             
+     
+
+        </div>
+            </div><!-- /header -->
+
+
+
+
+	<div role="main" class="ui-content">
+
+           <div class ="ui-field-conter">
+           <label for="textinput-1">Nome Comleto:</label>
+           <input type="text" name="textinput-1" id="textinput-1" placeholder="Nome" value="">
+           <label for="textinput-1">CPF:</label>
+           <input type="text" name="textinput-1" id="textinput-1" placeholder="CPF sem pontos e traços" value="">
+           <label for="select-native-1">Marca do aparelho:</label>
+      <select name="select-native-1" id="select-native-1">
+      	   <option value="smal">Samsung</option>
+      	   <option value="smal">Motorola</option>
+      	   <option value="smal">Aplle</option>
+      	   <option value="smal">Sony</option>
+      	   <option value="smal">LG</option>
+      	   <option value="smal">Outros</option>
+    </select>
+          <label for="textinput-1">Modelo:</label>
+          <input type="text" name="textinput-1" id="textinput-1" placeholder="Modelo do Dispositivo" value="">
+          </div>
+          <label for="textinput-1">Numero Do IMEI:</label>
+          <input type="text" name="textinput-1" id="textinput-1" placeholder="*#06# na tela de discagem" value="">
+          </div>
+          <button type="submit" id="submit-1" class="ui-shandow ui-btn ui-corner-all">Salvar</button>
+
+
+
+	 <div data-role="header" data-theme="b" data-position="fixed">
+
+                         
+                     <left> <img src='start1.png'class='bg'whidth="50px",height="50px" /></left>
+                           
+
+                             
+            </div><!-- /header -->
+
+
+
+
+
+		
+	</div><!-- 
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+
+
+
+              
+    </body>
+
+
+   
+   </html>
